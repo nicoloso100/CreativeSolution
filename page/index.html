@@ -973,11 +973,14 @@
             <!-- Start  contact -->
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="form contact-form">
-                <div id="sendmessage">
-                  Su mensaje ha sido enviado! Responderemos muy pronto
-                </div>
+                <div id="sendmessage"></div>
                 <div id="errormessage"></div>
-                <form action="" method="post" role="form" class="contactForm">
+                <form
+                  action="/contactEmail"
+                  method="post"
+                  role="form"
+                  class="contactForm"
+                >
                   <div class="form-group">
                     <input
                       type="text"
@@ -986,7 +989,7 @@
                       id="name"
                       placeholder="Nombre"
                       data-rule="minlen:4"
-                      data-msg="Please enter at least 4 chars"
+                      data-msg="Por favor ingrese un nombre de mínimo 4 caracteres"
                     />
                     <div class="validation"></div>
                   </div>
@@ -998,7 +1001,7 @@
                       id="email"
                       placeholder="Email"
                       data-rule="email"
-                      data-msg="Please enter a valid email"
+                      data-msg="Por favor ingrese un email válido"
                     />
                     <div class="validation"></div>
                   </div>
@@ -1010,7 +1013,7 @@
                       id="subject"
                       placeholder="Asunto"
                       data-rule="minlen:4"
-                      data-msg="Please enter at least 8 chars of subject"
+                      data-msg="Por favor ingrese un asunto de mínimo 8 caracteres"
                     />
                     <div class="validation"></div>
                   </div>
