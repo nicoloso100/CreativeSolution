@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm install && rm -drf dist && concurrently \"tsc --build\" \"wait-on dist/index.js && node dist/index.js\"",
-    "dev": "concurrently \"tsc --watch\" \"nodemon dist/index.js\""
+    "start": "npm run buildapp && npm install && rm -drf dist && concurrently \"tsc --build\" \"wait-on dist/index.js && node dist/index.js\"",
+    "dev": "concurrently \"tsc --watch\" \"nodemon dist/index.js\"",
+    "buildapp": "cd ../application && npm install && rm -drf build && npm run build && cd ../api"
   },
   "keywords": [],
   "author": "",
