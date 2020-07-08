@@ -10,6 +10,10 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(router);
 app.use("/", express.static("../page/"));
+app.use(
+  "/argon-design-system-react/static",
+  express.static("../application/build/static")
+);
 app.use("/app", express.static("../application/build"));
 
 app.listen(port, () => {
